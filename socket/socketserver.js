@@ -32,13 +32,14 @@ io.on("connection", (socket) => {
         
     })
     socket.on("join_room", (data) => {
-      console.log(joined);
+      // console.log(joined);
     });
   
-    socket.on("send_message", async (data) => {
-      socket.to(joined.get('64303e26ab13f567df4f0d88')).emit("receive_message", data);
-      console.log(data);
-    });
+    // socket.on("send_message", async (data) => {
+    //   socket.to(joined.get('64303e26ab13f567df4f0d88')).emit("receive_message", data);
+    //   console.log(data);
+    // });
+
     socket.on("Grp-msg", async(data)=>{
       try{
          let users = await group.findById(data.grpid);
@@ -71,7 +72,7 @@ io.on("connection", (socket) => {
     
 
     socket.on("disconnect", () => {
-      console.log("User Disconnected", socket.id);
+      // console.log("User Disconnected", socket.id);
     });
 
   });

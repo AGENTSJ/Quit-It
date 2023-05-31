@@ -3,20 +3,46 @@ const user = require('../db/models/usermodel')
 const jwt = require('jsonwebtoken');
 const router = express.Router();
 router.use(express.json())
+const {body,validationResult} =require('express-validator');
+const bcrypt = require('bcrypt');
+
+
 
 const auth = require('../middleware/auth')
 
 const jwt_sceret = 'allthisalloveragain'
 
 
-router.post('/createuser',async(req,res)=>{
-    let data = req.body;
+router.post('/createuser',
+[
+    body('email').isEmail(),
+    body('password').isLength({min:6})
+]
+,async(req,res)=>{
+    // let data = req.body;
+    const salt = await bcrypt.genSalt(10);
+    const hashpass = await bcrypt.hash(req.body.password,salt)
+    let data = {
+        name:req.body.name,
+        email:req.body.email,
+        groups:req.body.groups,
+        password:hashpass
+    }
     try{
-    await user.create(data)
-        res.send({
-            valid:true,
-            stmt:"user created"
-        })
+        let vresult = validationResult(req);
+        if(vresult.isEmpty()){
+            await user.create(data)
+            res.send({
+                valid:true,
+                stmt:"user created"
+            })
+        }else{
+            res.send({
+                valid:false,
+                stmt:"provide correct format"
+            })
+        }
+        
     }catch(e){
         res.send({
             valid:false,
@@ -28,6 +54,8 @@ router.post('/login',async(req,res)=>{
     
     try{
        let logger =  await user.findOne({email:req.body.email});
+       let PassVerify = await bcrypt.compare(req.body.password,logger.password)
+        // if(PassVerify){
         if(logger.password==req.body.password){
             let userdata = {
                 _id:logger.id

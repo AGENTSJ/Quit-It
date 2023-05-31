@@ -1,0 +1,50 @@
+1st 
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDMwM2QwYjMwZGFmMGI5ZWFiZGEzYmMiLCJpYXQiOjE2ODA4ODI5NjJ9.DaDyvVXZAZdUWvoVo_wDizAK610fezA_qiL0xoands0
+
+2nd
+
+"abhijithsj@abijt.com"
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDMwM2QyMjMwZGFmMGI5ZWFiZGEzYmYiLCJpYXQiOjE2ODA4ODI5ODJ9.6eZnBNgaqvZlkOQ0IDuRa5m5-ojK9kd3-GPPut6kWwY
+
+3rd
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDMwM2UyNmFiMTNmNTY3ZGY0ZjBkODgiLCJpYXQiOjE2ODA4ODM1Mzh9.jl7tbyOwzFaOmHFKtoWXrzbqns5b7BMHFqPkXgLSxNA
+test1
+test1@test.com
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDc3MTRiMDE0MDlhOTYxMjU0MzRlNTYiLCJpYXQiOjE2ODU1MjU3MjJ9.sGckYODcrzHjU0JYoaVxI7SWpPlDvqk3q3We_ugCNLE
+test123
+
+grp = testg1
+
+
+test2
+test2@test.com
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDc3MTVjMzE0MDlhOTYxMjU0MzRlNjEiLCJpYXQiOjE2ODU1MjU5Nzd9.XKkfdGY0sn5bBWXlnxa3mkWGnOKDvNreUgPP9QG_8Kw
+test234
+
+
+const { body, validationResult } = require('express-validator');
+
+[
+    body('name').isLength({min:3}),
+    body('password').isLength({min:6})
+]
+
+ const verror = validationResult(req);
+        if(!verror.isEmpty()){
+            res.status(400).send('provide valid formats for credentials');
+        }
+        else{
+        }
+
+
+
+ const salt = await bcrypt.genSalt(10);
+                const hashpass = await bcrypt.hash(req.body.password,salt);
+                var collect = await user.create({
+                    name:req.body.name,
+                    password:hashpass
+
+                })

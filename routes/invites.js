@@ -7,16 +7,23 @@ router.use(express.json());
 
 //sent invite
 router.get('/',auth,async(req,res)=>{
-    let us = await user.findById(req.user._id);
-    res.send(us.invites);
+    try{
+
+        let us = await user.findById(req.user._id);
+        res.send(us.invites);
+    }catch{
+        res.send('invalid user or server error')
+    }
 })
 router.post('/sent',auth,async(req,res)=>{
 
     let data = req.body;
-    console.log(data);
+    // console.log(data);
     let gp = await group.findById(data.grpid)
-    
-    if(gp.admins.includes(req.user._id)){
+    let tar = await user.findOne({email:data.email});
+    // console.log(tar.id);
+    if(gp.admins.includes(req.user._id)&&!(gp.users.includes(tar.id))){
+    // if(gp.admins.includes(req.user._id)){
         try{
             
             let tar_user = await user.findOneAndUpdate({email:data.email},{$push:{invites:{
@@ -38,7 +45,7 @@ router.post('/sent',auth,async(req,res)=>{
 
 router.post('/action',auth,async(req,res)=>{
   
-        let data = req.body;
+    let data = req.body;
 
   
     if(data.action==true){
