@@ -13,10 +13,10 @@ const usageschema = mongoose.Schema({
         type:Array
     },
     ontrack:{
-        type:Boolean
+        type:Number
     },
     total:{
-        type:Number
+        type:Boolean
     }
 })
 

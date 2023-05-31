@@ -10,7 +10,7 @@ app.use(cors())
   app.use('/group',require('./routes/group'))
   app.use('/message',require('./routes/message'))
   app.use('/use',require('./routes/uses'))
-
+  app.use('/score',require('./routes/score'))
 app.listen(80,()=>{
     console.log('server running in http://127.0.0.1:80');
 })

@@ -4,11 +4,10 @@ const auth = require('../middleware/auth')
 router.use(express.json())
 const use = require('../db/models/usageModel');
 const user = require('../db/models/usermodel');
-
+const group = require('../db/models/groupmodel');
 router.get('/',(req,res)=>{
     res.send('hellor');
 })
-
 router.get('/add',auth,async(req,res)=>{
 let data = req.body;
 try{
@@ -44,6 +43,11 @@ res.send('data saved')
 console.log(e);
 }
 
+
+
+
+})
+//sends the user specific details about his usage for the last 7 days
 router.get('/getuse',auth,async(req,res)=>{
     try{
         let packet = await use.find({user:req.user._id}).limit(7);
@@ -54,7 +58,5 @@ router.get('/getuse',auth,async(req,res)=>{
     }
 })
 
-  
-})
 
 module.exports = router;

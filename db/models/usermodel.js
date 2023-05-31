@@ -12,8 +12,10 @@ let userschema = new mongoose.Schema({
     ],
     invites:[
         {grp:String,name:String,grpid:mongoose.Types.ObjectId} 
-    ]
-   
+    ],
+   ontrack:{
+    type:Number
+   }
 
 })
 
