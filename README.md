@@ -1,8 +1,8 @@
-#Quit-It
+# Quit-It
 
 desc
 
-## Run backend:
+## Run Backend:
 
 ### Run mongoDb
 ```bash
@@ -17,5 +17,11 @@ node index.js
 ```bash
 cd Back-end/socket
 node socketserver.js
+```
+## Run Frontend
+
+```bash
+cd Front-end
+npm start
 ```
 
