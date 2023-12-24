@@ -1,10 +1,11 @@
 # Quit-It
 
-desc
+## About
+It is a full-stack web app that enables users to track their tobacco usage and embark on a journey of tobacco quitting with their peers. The app includes a group chat facility that allows users to motivate each other during challenging times. Additionally, it features a healthy competition based on the number of days users have been tobacco-free, with a group scoreboard
 
 ## Run Backend:
 
-### Run mongoDb
+### Run mongoDb server
 ```bash
 mongod
 ```
