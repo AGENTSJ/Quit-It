@@ -1,0 +1,225 @@
+
+.grpcont{
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+}
+.grpnames,.grpmsg{
+    
+    height: 800px;
+    width: 600px;
+    overflow-y: scroll;
+    
+    background-color: rgb(65, 62, 62);
+    
+}
+#ryt{
+    justify-content: center;
+}
+.grpmsg{
+    height: 810px;
+}
+.grpnames{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* align-items: center; */
+    
+}
+.grpnames button{
+    height: 40px;
+    background-color: rgb(29, 26, 26);
+    color: rgb(131, 122, 206);
+    border-radius: 5px;
+    border: 0px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.textar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: sticky;
+    bottom: 0;
+}
+.textar input{
+    height: 45px;
+    width: 450px;
+    border-radius: 5px;
+    border: 0px;
+}
+.textar button{
+    height: 50px;
+    width: 60px;
+    margin-left: 10px;
+    border-radius: 10px;
+    border: 0px;
+}
+.msgwrap{
+    min-height: 600px;
+    padding: 10px;
+}
+.you{
+    
+    justify-self:end;
+    /* background-color: beige; */
+    background-color: rgb(29, 26, 26);
+    border-radius: 5px 0 0 5px;
+    width: fit-content;
+
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    
+}
+.other{
+    
+    /* background-color: beige;
+     */
+     background-color: rgb(29, 26, 26);
+    border-radius: 0 5px 5px 0;
+    width: fit-content;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+.other h3 {
+    font-size: 17px;
+}
+.wrap{
+    /* background-color: antiquewhite; */
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+
+}
+.grpwrap{
+     background-color:rgb(131, 122, 206) ;
+     /* background-color: rgb(29, 26, 26); */
+     
+     
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.grpwrap h3{
+    margin-left:20px ;
+}
+.x{
+    color: red;
+    display: inline-block;
+    margin-right: 3px;
+    cursor: pointer;
+    width: fit-content;
+}
+.grpnamecont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    margin-bottom: 5px;
+    background-color:  rgb(29, 26, 26);
+    color: rgb(182, 173, 255);
+}
+.grpnamecont button{
+    width: 75px;
+    height: 50px;
+    background-color: transparent;
+    border: 0px;
+    color: rgb(186, 177, 255);
+    font-size: 18px;
+    cursor: pointer;
+
+    
+}
+.invip{
+   flex-basis: 100%;
+   height: 40px;
+   font-size: 15px;
+}
+.grpmsg{
+    position: relative;
+    color: rgb(128, 121, 185);
+}
+.score{
+    height: 810px;
+    width: 600px;
+    background-color: rgb(65, 62, 62);
+    /* opacity: 0.1; */
+    position: absolute;
+    top: 0px;
+    left:0px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    
+}
+.leftcont{
+    height: 600px;
+    width: 400px;
+    position: relative;
+}
+.scorehead{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(29, 26, 26);
+    color: rgb(176, 166, 255);
+    width: 100%;
+    height: 90px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+.scorehead h2{
+    margin: 0px;
+    
+}
+.scorcard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(31, 25, 25);
+    margin-top: 10px;
+    width: 550px;
+    border-radius: 5px;
+    color:rgb(176, 166, 255);
+}
+.scorcard h1{
+    margin: 0px;
+}
+.score button{
+    width: 100%;
+    margin-top: 10px;
+    background-color: rgb(176, 166, 255);
+    border: 0px;
+    height: 40px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.textar input:focus{
+    outline: none;
+}
+.textar input{
+    font-size: 20px;
+}

@@ -1,0 +1,242 @@
+body{
+    background:  fixed url('smoke.jpg')  no-repeat ;
+    background-size: cover;
+    background-position: center;
+   
+    
+}
+.limit{
+    background-color: aliceblue;
+    margin-top: 200px;
+}
+.suggest{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+    height: 200px;
+}
+.cigcont{
+    
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* background-color: antiquewhite; */
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.cig{
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    /* margin-bottom: auto; */
+
+}
+.cigbut{
+    height: 50px;
+    /* background-color: #C2A77F;
+     */
+     background-color: rgb(41, 40, 40);
+    width: 100px;
+    border: 2px solid black;
+    border-radius:4px;   
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;  
+}
+.cigbod{
+    height: 50px;
+    width: 250px;
+    background-color: aliceblue;
+    border:2px solid black;
+    border-left: 0px;
+    border-right: 0px;
+    
+
+    /* border-radius:4px;   
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;     */
+}
+.cigneck{
+    position: relative;
+    height: 50px;
+    width: 20px;
+    background-color:aliceblue;
+    border:2px solid black;
+    border-left: 0px;
+    border-radius: 4px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px; 
+}
+.lighter{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: 1s;
+    height: fit-content;
+    transform: translateY(200px);
+    
+}
+.temp::after {
+    content: "";
+    position: absolute;
+    top: -44px;
+    left: -17px;
+    width: 40px;
+    height: 192px;
+    
+    background-color: rgb(65, 62, 62);
+    clip-path: polygon(51% 23%, 51% 49%, 25% 49%, 21% 43%, 28% 37%, 21% 30%, 28% 23%);
+  }
+  
+.light{
+    margin-left: 400px;
+    
+}
+.libtn{
+    position: relative;
+    background-color: rgb(177, 167, 252);
+    height: 60px;
+    border: 0px;
+    font-weight: 300;
+    /* margin-bottom: 20px; */
+    font-size: 20px;
+    cursor: pointer;
+    letter-spacing: 2px;
+
+}
+.cigsmok img{
+    height: 100px;
+    width: 50px;
+}
+.cigsmok{
+    position: absolute;
+    top: 56px;
+    left: 1100px;
+    transition: 1s;
+    /* opacity: 0; */
+}
+.limit{
+    height: 100px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center ;
+    align-items: center;
+    border-radius: 5px;
+}
+.qna{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    background-color: aliceblue;
+    z-index: 1000;
+    border-radius: 15px;
+    padding: 20px;
+    /* box-shadow: black 100px; */
+    transform: translateY(0px);
+    transition: 1s;
+}
+.overlay{
+    position: absolute;
+    font-size: 24px;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(36, 36, 37);
+    /* backdrop-filter: blur(8px); */
+    display: none;
+
+}
+.cards{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+    align-content: center;
+    /* margin-bottom: 300px; */
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+a button{
+    background-color: rgb(128, 121, 185);
+    /* height: 60px; */
+    border: 0px;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    padding: 20px;
+    margin-left: 90%;
+}
+
+.overlay button{
+    position: absolute;
+   background-color: transparent;
+    border: 0px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 20px;
+    top: 281px;
+    left: 257px;
+    transition: 0.1s;
+}
+.overlay button:hover{
+    transform: scale(1.2);
+}
+.qna input{
+    position: absolute;
+    width: 70px;
+    height: 40px;
+    border: 0px;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    font-size: 15px;
+    top: 213px;
+    left:36px;
+}
+.qna input:focus{
+    outline: none;
+}
+.qna p{
+    margin-bottom: 75px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}

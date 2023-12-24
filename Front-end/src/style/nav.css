@@ -1,0 +1,23 @@
+.nav{
+    background-color:  rgb(25, 24, 32);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    height: 70px;
+    margin-bottom: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.nav a{
+    color:  rgb(182, 173, 255);
+    text-decoration: none;
+    cursor: pointer;
+    font-size:23px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    transition: 0.1s;
+}
+.nav a:hover{
+    color: aliceblue;
+}
